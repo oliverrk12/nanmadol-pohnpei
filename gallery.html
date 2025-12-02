@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>About Nan Madol</title>
+  <title>Gallery – Nan Madol</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,8 +13,8 @@
 
 <header class="bg-success text-white text-center p-4">
   <div class="container">
-    <h1>About Nan Madol</h1>
-    <p class="tagline">History, legends, and cultural significance</p>
+    <h1>Nan Madol Gallery</h1>
+    <p class="tagline">Scenes from Pohnpei’s ancient ruins</p>
   </div>
 </header>
 
@@ -29,8 +29,8 @@
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav ms-auto text-center">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
         <li class="nav-item"><a class="nav-link" href="projects.html">History</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
@@ -40,48 +40,71 @@
 
 <main class="container my-5">
 
-  <div class="row align-items-center mb-5">
-    <div class="col-md-6">
-      <h2>Ancient Origins</h2>
+  <div class="row text-center mb-4">
+    <div class="col">
+      <h2>Photo Collection</h2>
       <p>
-        Nan Madol served as the ceremonial and political center of the Saudeleur Dynasty,
-        which ruled Pohnpei for several centuries. The site is composed of more than ninety
-        artificial islets built from stacked basalt columns, showcasing advanced engineering
-        methods for its time.
+        This gallery highlights key features of Nan Madol, including its stone structures,
+        canals, and surrounding landscape. Click any image to view it in full size.
       </p>
-      <p>
-        The complex layout of canals and platforms reflects both political authority and
-        ceremonial function, making Nan Madol one of the most significant archaeological
-        sites in the Pacific Islands.
-      </p>
-
-      <h2 class="mt-4">Legends and Oral History</h2>
-      <p>
-        According to local legend, two brothers used supernatural abilities to transport and
-        assemble the massive basalt stones that form Nan Madol. These stories remain an
-        important part of Pohnpeian identity and cultural memory, passed down through
-        generations.
-      </p>
-      <p>
-        Today, Nan Madol continues to serve not only as a historical monument, but also as
-        a symbol of Micronesian heritage, spirituality, and resilience.
-      </p>
-    </div>
-
-    <div class="col-md-6 text-center">
-      <img src="images/nanmadol4.jpg" class="img-fluid rounded shadow"
-           alt="Stone ruins surrounded by water at Nan Madol">
     </div>
   </div>
 
+  <div class="row g-4">
+
+    <div class="col-sm-6 col-md-4">
+      <img src="images/nanmadol2.jpg" class="img-fluid rounded shadow gallery-img"
+           alt="Nan Madol walls"
+           data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="openImage(this)">
+      <p class="text-center mt-2">Basalt stone walls</p>
+    </div>
+
+    <div class="col-sm-6 col-md-4">
+      <img src="images/nanmadol3.jpg" class="img-fluid rounded shadow gallery-img"
+           alt="Stone canals of Nan Madol"
+           data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="openImage(this)">
+      <p class="text-center mt-2">Close up of Stone Canals</p>
+    </div>
+
+    <div class="col-sm-6 col-md-4">
+      <img src="images/nanmadol5.jpg" class="img-fluid rounded shadow gallery-img"
+           alt="Aerial view of Nan Madol site"
+           data-bs-toggle="modal" data-bs-target="#imageModal"
+           onclick="openImage(this)">
+      <p class="text-center mt-2">Ways of transportation through Nan Madol</p>
+    </div>
+
+  </div>
+
 </main>
+
+<div class="modal fade" id="imageModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content text-center">
+      <div class="modal-body">
+        <img id="modalImage" class="img-fluid rounded" alt="Expanded gallery image">
+      </div>
+    </div>
+  </div>
+</div>
 
 <footer class="bg-dark text-white text-center p-3">
   <p class="mb-0">&copy; 2025 Richard Oliver Jr.</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 <script src="script.js"></script>
+
+<script>
+  function openImage(img) {
+    const modalImage = document.getElementById("modalImage");
+    modalImage.src = img.src;
+    modalImage.alt = img.alt;
+  }
+</script>
 
 </body>
 </html>

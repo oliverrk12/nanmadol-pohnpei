@@ -1,7 +1,9 @@
-/* =====================
+/* ===============================
    Nan Madol Website Styles
-   ===================== */
+   Student: Richard Oliver Jr.
+   =============================== */
 
+/* --- Global Styles --- */
 body {
   background-color: #f6eee4;
   color: #1f2937;
@@ -10,140 +12,102 @@ body {
   padding: 0;
 }
 
-/* --- Wrapper --- */
-.wrapper {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 1em;
+/* --- Headings & Text --- */
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+p {
+  line-height: 1.7;
+  font-size: 1rem;
 }
 
 /* --- Header --- */
 header {
   background-color: #005f73;
-  color: white;
-  text-align: center;
-  padding: 1.5em 1em;
 }
 
 .site-title {
-  margin: 0;
-  font-size: 2em;
+  font-size: 2.2rem;
+  margin-bottom: 0.3em;
 }
 
 .tagline {
-  margin-top: 0.5em;
   font-style: italic;
+  font-size: 1rem;
 }
 
-/* --- Navigation --- */
-nav {
-  background-color: #0a9396;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav li {
-  margin: 0 1em;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.5em;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #ffd166;
+/* --- Navigation (Bootstrap Compatible Styling) --- */
+.navbar-dark {
+  background-color: #0a9396 !important;
 }
 
 /* --- Main Content --- */
 main {
-  padding: 2em 0;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
-h1, h2 {
-  text-align: center;
-}
-
-p {
-  line-height: 1.6;
+/* --- Images --- */
+img {
+  max-width: 100%;
+  border-radius: 8px;
 }
 
 /* --- Gallery --- */
-.gallery {
-  text-align: center;
+.gallery-img {
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.gallery figure {
-  display: inline-block;
-  margin: 1em;
+.gallery-img:hover {
+  transform: scale(1.03);
 }
 
-.gallery img {
-  width: 280px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.gallery figcaption {
-  margin-top: 0.5em;
-  font-size: 0.9em;
-  color: #555;
+/* --- Tables --- */
+table {
+  background-color: white;
 }
 
 /* --- Forms --- */
 form {
-  margin-top: 1.5em;
+  background-color: #ffffff;
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-weight: bold;
 }
 
 input, textarea {
-  width: 100%;
-  padding: 0.5em;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  font-family: Arial, sans-serif;
 }
 
-button {
+/* --- Buttons --- */
+.btn-success {
   background-color: #0a9396;
-  color: white;
   border: none;
-  padding: 0.7em 1.2em;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
-button:hover {
+.btn-success:hover {
   background-color: #00747a;
 }
 
 /* --- Footer --- */
 footer {
-  text-align: center;
   background-color: #005f73;
   color: white;
-  padding: 1em;
 }
 
-/* --- Images --- */
-img {
-  width: 100%;
-  max-width: 400px;
-  margin: 1em auto;
-  display: block;
-  border-radius: 8px;
-}
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
 
-/* --- Responsive --- */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
+  .tagline {
+    font-size: 0.9rem;
   }
 }
